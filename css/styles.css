@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Jost', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    color: #050517;
+}
+
+.header-section {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2%;
+    background-color: bisque;
+}
+
+.header-list {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+}
+
+.link-list {
+  text-decoration: none;
+  color: #8B0000;
+  font-weight: bold;
+  position: relative;
+}
+
+.link-list::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #130101;
+  transition: width 0.3s ease;
+}
+
+.link-list:hover::after {
+  width: 100%;
+}
+
+.title-h1 {
+    text-align: center;
+    font-size: x-large;
+    background: linear-gradient(270deg, #8B0000, #ffffff, #8B0000);
+    background-size: 400% 400%;
+    animation: gradientMove 6s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.grid-container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* background-color: rgba(105, 104, 104, 0.445); */
+    margin: 20px;
+    padding: 10px;
+    /* border: 1px solid; */
+    border-radius: 15px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+.body-card {
+    width: 75%;
+    height: 90%;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(255, 251, 255, 0.85);
+    box-shadow: 0 0 20px rgba(5, 5, 23, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(147, 134, 127, 0.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.body-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 10px 15px rgba(0, 0, 0, 0.2),
+        0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-information {
+    width: max;
+    margin: 0% 10% 0% 10%;
+    justify-content: flex-end;
+}
+
+.img {
+    max-width: 50%;
+    height: auto;
+    display: flex;
+}
