@@ -14,7 +14,6 @@ body {
     display: flex;
     justify-content: flex-end;
     padding-right: 2%;
-    background-color: bisque;
 }
 
 .header-list {
@@ -79,6 +78,10 @@ body {
     display: block;
 }
 
+.color {
+    color: #050517 !important;
+}
+
 
 .body-card {
     width: 75%;
@@ -120,4 +123,251 @@ body {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
+}
+
+/* Mariana
+
+/* Estilos básicos para todo el sitio */
+body {
+    /* Se inicializa el margin y el padding en 0 */
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif; 
+    position: relative;
+    min-height: 100vh;
+    color: #050517;
+}
+
+/* Video de fondo */
+.background-video {
+    position: fixed;    /* El video se mantiene fijo aunque se haga scroll */
+    right: 0;          /* Se alinea a la derecha de la pantalla */
+    bottom: 0;         /* Se alinea al fondo de la pantalla */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;       /* Coloca el video detrás de todo el contenido */
+    object-fit: cover; /* Hace que el video cubra toda el área sin deformarse */
+    pointer-events: none; /* Evita que el video sea clickeable */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;     /* Usamos flexbox para centrar el contenido */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+    overflow-y: auto;  /* Permite scroll vertical si el contenido es muy largo */
+}
+
+/* Caja de formulario */
+.form-box {
+    background-color: rgba(255, 251, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(5, 5, 23, 0.15);
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(8px); /* Efecto de desenfoque en el fondo */
+    margin: 20px 0;
+    border: 1px solid rgba(147, 134, 127, 0.2);
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    color: #050517;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Estilos para los inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #93867F;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: rgba(255, 251, 255, 0.9);
+    color: #050517;
+}
+
+
+/* Estilos para los botones */
+.btn-principal {
+    width: 100%;
+    padding: 12px;
+    background-color: #92140C;
+    color: #FFFBFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;   /* Cambia el cursor a mano */
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease; /* Animación al pasar el mouse */
+}
+
+/* Estilos para el botón principal cuando se pasa el mouse por encima */
+.btn-principal:hover {
+    background-color: #7a1109; /* Rojo más oscuro */
+}
+
+/* Botones de redes sociales */
+.btn-google, .btn-apple {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #93867F;
+    border-radius: 5px;
+    background-color: rgba(255, 251, 255, 0.9);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Animación suave */
+}
+
+/* Estilos para los botones de redes sociales cuando se pasa el mouse por encima */
+.btn-google:hover, .btn-apple:hover {
+    background-color: rgba(252, 202, 70, 0.1); /* Fondo amarillo muy suave */
+    border-color: #92140C; /* Borde rojo */
+}
+
+/* Estilos para los logos de redes sociales */
+.btn-google img, .btn-apple img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Divisor O */
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    color: #93867F;
+}
+
+
+/* Líneas decorativas a los lados del divisor "O" */
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #93867F;
+}
+
+.divider::before {
+    left: 0;              /* Línea izquierda */
+}
+
+.divider::after {
+    right: 0;             /* Línea derecha */
+}
+
+/* Enlaces */
+a {
+    color: #92140C;
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease;
+}
+
+/* Enlaces cuando se pasa el mouse por encima */
+a:hover {
+    color: #FCCA46;
+}
+
+/* Género y términos */
+.genero {
+    margin-bottom: 15px;
+    color: #050517;
+}
+
+/* Etiquetas de género */
+.genero label {
+    margin-right: 15px;       /* Espacio entre opciones */
+}
+
+/* Etiquetas de términos */
+.terminos {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #050517;
+}
+
+/* Texto de inicio de sesión */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #93867F;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: #92140C;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none; /* Oculto por defecto */
+}
+
+/* Estilos del header */
+.header {
+    position: fixed;            /* La barra se mantiene fija en la parte superior */
+    top: 0;                    
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 251, 255, 0.85);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(5, 5, 23, 0.1);
+    z-index: 2;
+}
+
+/* Estilos del logo */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Estilos del nombre del logo */
+.brand:hover {
+    opacity: 0.8;              /* Reduce ligeramente la opacidad al pasar el mouse */
+}
+
+/* Animación del nombre del logo */
+.brand-name {
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 24px;
+    font-weight: bold;
+    color: #050517;
+    text-transform: uppercase;         /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px;
+}
+
+.brand-name:hover {
+    color: #7a1109;            /* Cambia el color al pasar el mouse */
+    transform: scale(1.05);    /* Ligero efecto de zoom */
+    text-shadow: 2px 2px 4px rgba(5, 5, 23, 0.15);
 }

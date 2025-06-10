@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline class="background-video" style="width: 30%; height: 30%">
+        <source src="/assets/videos/globo.mp4" type="video/mp4">
+    </video>
+
+    <!-- Encabezado con el logo de WorldLink -->
+    <header class="header">
+        <a href="/index.html" class="brand">
+            <img src="/assets/images/logo.png" alt="WorldLink Logo" style="width: 50px; height: 50px;">
+            <span class="brand-name">WorldLink</span>
+        </a>
+    </header>
+
+    <br><br><br><br>
+
+    <div class="container">
+        <div class="form-box">
+            <h2>Crea tu cuenta</h2>
+            <!-- Formulario de registro -->
+            <form action="/index.html">
+                <input type="text" placeholder="Primer Nombre" required>
+                <input type="text" placeholder="Segundo Nombre">
+                <input type="text" placeholder="Primer Apellido" required>
+                <input type="text" placeholder="Segundo Apellido" required>
+                <br><br>
+                <label>Fecha de nacimiento:</label>
+                <input type="date" required>
+                <br><br>
+                <label>Género:</label>
+                <div class="genero">
+                    <label><input type="radio" name="genero" value="Masculino"> Masculino</label>
+                    <label><input type="radio" name="genero" value="Femenino"> Femenino</label>
+                    <label><input type="radio" name="genero" value="Omitir"> Omitir</label>
+                </div>
+                <br>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <br>
+                <input type="password" placeholder="Contraseña" required>
+                <br>
+                <input type="password" placeholder="Confirmar Contraseña" required>
+                <br>
+                <!-- Terminos y condiciones -->
+                <div class="terminos">
+                    <input type="checkbox" required>
+                    <label>Acepto los <a href="#">términos del servicio</a> y la <a href="#">política de privacidad</a></label>
+                </div>
+                <!-- Boton de registro -->
+                <br><br>
+                <button type="submit" class="btn-principal">Registrarse</button>
+            </form>
+
+            <br>
+
+            <div class="divider">O</div>
+
+            <br>
+
+            <!-- Boton de Google -->
+            <button class="btn-google">
+                <img src="/assets/images/Google.png" alt="Google logo" style="width: 20px; height: 20px;">
+                Continuar con Google
+            </button>
+
+            <!-- Boton de Apple -->
+            <button class="btn-apple">
+                <img src="/assets/images/Apple.png" alt="Apple logo" style="width: 20px; height: 20px;">
+                Continuar con Apple
+            </button>
+
+            <!-- Link de inicio de sesión -->
+            <p class="login-link">¿Ya tienes una cuenta? <a href="./Login.html">Inicia sesión</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
