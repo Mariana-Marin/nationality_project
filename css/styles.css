@@ -115,3 +115,9 @@ body {
     height: auto;
     display: flex;
 }
+
+.more-info {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
